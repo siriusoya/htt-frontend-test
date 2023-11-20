@@ -3,9 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,10 +22,69 @@ a:hover {
 
 body {
   margin: 0;
+}
+
+.login_container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to right, #1a1423 , #b75d69);
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+}
+
+.login_modal {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  height: 315px;
+  width: 17.5em;
+  padding: 2.5em;
+  justify-content: center;
+  
+}
+
+#login_form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+}
+
+#login_title {
+  position: relative;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0;
+}
+
+#login_underline {
+  border-color: #1A1423;
+  margin-bottom: 3em;
+}
+
+#login_button {
+  background-color: #b75d69;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+
+.form_input {
+  padding: 9px;
+  border-color: #1A1423;
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 0.5em;
+}
+
+.error_message {
+  color: red;
+  font-size: small;
+  position: absolute;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
