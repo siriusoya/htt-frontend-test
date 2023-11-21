@@ -2,6 +2,8 @@ import { createBrowserRouter, redirect } from "react-router-dom";
 import App from "./App";
 import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
+import AddProduct from "./pages/AddProductPage";
+import ProductVariantPage from "./pages/ProductVariantPage";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,14 @@ const router = createBrowserRouter([
         path: "/",
         element: <HomePage />,
       },
+      {
+        path: "/add-product",
+        element: <AddProduct />,
+      },
+      {
+        path: "/product/:productsku",
+        element: <ProductVariantPage />
+      }
     ],
   },
   {
