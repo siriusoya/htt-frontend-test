@@ -38,6 +38,7 @@ const editorStateShow = EditorState.createWithContent(contentState);
             <Link
                 className='link'
                 to={`/product/${product.sku}`}
+                state={product}
             >
             <button 
             className="product_button"
