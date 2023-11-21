@@ -192,6 +192,24 @@ body {
   margin: 0.5em;
 }
 
+.link {
+  text-decoration: none;
+  align-self: center;
+}
+
+.add_variant_button {
+  background-color: #b75d69;
+  width: 210px;
+  border: 2px #1a1423 solid;
+  align-self: flex-end;
+  margin-right: 5em;
+}
+
+.add_variant_button:hover {
+  background-color: #372549;
+  color: #ffffff;
+}
+
 .product_button:hover {
   background-color: #372549;
   color: #ffffff;

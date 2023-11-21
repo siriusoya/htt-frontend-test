@@ -17,7 +17,9 @@ const handleDeleteProduct = () => {
             <h3 className="product_text">{product.name}</h3>
             <p className="product_text">{product.sku}</p>
             <p className="product_text">{product.brand}</p>
+
             <Link
+                className='link'
                 to={`product/${product.sku}`}
             >
             <button 

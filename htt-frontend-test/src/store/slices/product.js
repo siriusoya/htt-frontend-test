@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 
 export const productSlice = createSlice({
   name: "product",
@@ -174,15 +174,43 @@ export const productSlice = createSlice({
       );
       state.productList = latestProductList;
     },
-    fetchProductDetail: (state, action) => {
-        const selectedProduct = state.productList.filter((product) => product.sku === action.payload)
+    fetchProductVariants: (state, action) => {
+      const [selectedProduct] = state.productList.filter(
+        (product) => product.sku === action.payload
+      );
+      console.log(selectedProduct, "<<< selectedProduct dari slice");
+      console.log(current(state));
+      state.productVariants = selectedProduct.variants;
+    },
+    deleteProductVariant: (state, action) => {
+      let productList = state.productList;
 
-        state.productVariants = selectedProduct.variants
-    }
+      const productIndex = state.productList.findIndex(
+        (product) => product.sku === action.payload.productSku
+      );
+      let [variantProduct] = state.productList.filter(
+        (product) => product.sku === action.payload.productSku
+      );
+
+        console.log(variantProduct, 'gurl')
+
+      const latestProductVariantList = variantProduct.variants.filter(
+        (variant) => variant.sku !== action.payload.variantSku
+      );
+
+      variantProduct.variants = latestProductVariantList;
+
+      console.log(productIndex, variantProduct, '^^^')
+
+      productList.splice(productIndex, 1, variantProduct);
+
+      state.productList = productList;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { deleteProduct } = productSlice.actions;
+export const { deleteProduct, fetchProductVariants, deleteProductVariant } =
+  productSlice.actions;
 
 export default productSlice.reducer;
