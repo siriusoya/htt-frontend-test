@@ -25,6 +25,10 @@ const router = createBrowserRouter([
         element: <ProductForm />,
       },
       {
+        path: "/edit-product/:productSku",
+        element: <ProductForm />,
+      },
+      {
         path: "/product/:productSku",
         element: <ProductVariantPage />
       }

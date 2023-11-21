@@ -678,6 +678,7 @@ export const productSlice = createSlice({
       const productIndex = state.productList.findIndex(
         (product) => product.sku === action.payload.productSku
       );
+
       let [variantProduct] = state.productList.filter(
         (product) => product.sku === action.payload.productSku
       );
@@ -696,6 +697,17 @@ export const productSlice = createSlice({
 
       state.productList = productList;
     },
+    editProduct: (state, action) => {
+      let productList = state.productList;
+
+      const productIndex = state.productList.findIndex(
+        (product) => product.sku === action.payload.initialSku
+      );
+
+      productList.splice(productIndex, 1, action.payload.productData);
+
+      state.productList = productList;
+    },
     addProduct: (state, action) => {
       let productList = state.productList;
 
@@ -711,7 +723,7 @@ export const productSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { deleteProduct, fetchProductVariants, deleteProductVariant, addProduct } =
+export const { deleteProduct, fetchProductVariants, deleteProductVariant, addProduct, editProduct } =
   productSlice.actions;
 
 export default productSlice.reducer;

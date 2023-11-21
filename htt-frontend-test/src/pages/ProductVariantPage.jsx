@@ -13,6 +13,7 @@ const ProductVariantPage = () => {
 
   useEffect(() => {
     dispatch(fetchProductVariants(productSku))
+    
   }, [productList])
 
   return (

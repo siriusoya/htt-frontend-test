@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
-import { useSelector, useDispatch } from 'react-redux'
-import { addProduct } from '../store/slices/product'
-import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { addProduct, editProduct } from "../store/slices/product";
+import { useNavigate, useLocation } from "react-router-dom";
 import ReactDOM from "react-dom";
 import { EditorState, convertFromRaw, convertToRaw } from "draft-js";
 import {
@@ -26,12 +26,13 @@ const buttons = [
   { title: "Underline", handler: toggleUnderline, checker: isUnderline },
 ];
 
-const AddProduct = () => {
-  const dispatch = useDispatch()
+const AddProduct = (props) => {
+  const dispatch = useDispatch();
+  let { state } = useLocation();
 
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
   const [showModal, setShowModal] = useState(false);
-  const [productVariants, setProductVariants] = useState([])
+  const [productVariants, setProductVariants] = useState([]);
 
   const contentState = editorState;
   const editorStateShow = EditorState.createWithContent(
@@ -40,19 +41,24 @@ const AddProduct = () => {
 
   const navigate = useNavigate();
 
-
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      name: state?.name,
+      sku: state?.sku,
+      brand: state?.brand,
+    },
+  });
 
   const onSubmit = async (data) => {
-    console.log('submit dong :(((')
+    console.log("submit dong :(((");
     console.log(data);
     console.log(editorState, "<<<");
     const contentState = editorState.getCurrentContent();
-    console.log('content state', convertToRaw(contentState));
+    console.log("content state", convertToRaw(contentState));
 
     const rawContentState = convertToRaw(contentState);
 
@@ -62,44 +68,70 @@ const AddProduct = () => {
       brand: data.brand,
       description: rawContentState,
       variants: productVariants,
+    };
+
+    const editProductPayload = {
+      initialSku: state?.sku,
+      productData: addProductPayload,
+    };
+
+    if (state === null) {
+      dispatch(addProduct(addProductPayload));
+    } else {
+      dispatch(editProduct(editProductPayload));
     }
 
-    dispatch(addProduct(addProductPayload))
-
-    navigate('/');
+    navigate("/");
   };
 
-  
-
   function handleShowModal() {
-    setShowModal(true)
+    setShowModal(true);
   }
 
   function handleCloseModal() {
-    setShowModal(false)
+    setShowModal(false);
   }
 
   function handleAddVariant(data) {
-    console.log('add ketrigger')
+    console.log("add ketrigger");
     let copyVariants = productVariants;
-    copyVariants.push(data)
-    setProductVariants(copyVariants)
-    setShowModal(false)
+    copyVariants.push(data);
+    setProductVariants(copyVariants);
+    setShowModal(false);
   }
 
   function handleDeleteVariant(payload) {
-    console.log(payload, 'delete ketrigger')
+    console.log(payload, "delete ketrigger");
     const latestVariantList = productVariants.filter(
       (variant) => variant.sku !== payload
     );
 
-    setProductVariants(latestVariantList)
+    setProductVariants(latestVariantList);
   }
+
+  useEffect(() => {
+    if (state !== null) {
+      setProductVariants(state.variants);
+
+      const { blocks, entityMap } = state.description;
+
+      const contentStateEdit = convertFromRaw({
+        blocks: blocks,
+        entityMap: entityMap,
+      });
+
+      const editorStateShowEdit =
+        EditorState.createWithContent(contentStateEdit);
+      setEditorState(editorStateShowEdit);
+    }
+  }, []);
 
   return (
     <div className="home_container">
-      <h2 className="page_title">Add New Product</h2>
+      {/* {console.log(state, '<<<<<<<')} */}
 
+      {state === null && <h2 className="page_title">Add New Product</h2>}
+      {state !== null && <h2 className="page_title">Edit Product</h2>}
       <div id="product_form">
         <div className="input_container">
           <p className="product_label">Name</p>
@@ -183,26 +215,33 @@ const AddProduct = () => {
         </div>
 
         <div className="input_container">
-          {showModal && <VariantForm handleAddVariant={handleAddVariant} handleCloseModal={handleCloseModal} />}
+          {showModal && (
+            <VariantForm
+              handleAddVariant={handleAddVariant}
+              handleCloseModal={handleCloseModal}
+            />
+          )}
 
           <p className="product_label">Variants</p>
-          <button 
-          onClick={handleShowModal}
-          className="add_variant_form_button">Add Product Variant</button>
-
-          
+          <button onClick={handleShowModal} className="add_variant_form_button">
+            Add Product Variant
+          </button>
         </div>
 
         {productVariants.map((variant) => {
           return (
-            <VariantName key={variant.sku} variant={variant} handleDeleteVariant={handleDeleteVariant} />
-          )
+            <VariantName
+              key={variant.sku}
+              variant={variant}
+              handleDeleteVariant={handleDeleteVariant}
+            />
+          );
         })}
 
         {/* <Editor editorState={editorStateShow} readOnly={true} /> */}
 
         <button onClick={handleSubmit(onSubmit)} id="form_button">
-          Add Product
+          {state === null ? "Add Product" : "Edit Product"}
         </button>
       </div>
     </div>

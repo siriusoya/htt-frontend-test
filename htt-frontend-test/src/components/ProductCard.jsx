@@ -37,13 +37,20 @@ const editorStateShow = EditorState.createWithContent(contentState);
             </div>
             <Link
                 className='link'
-                to={`product/${product.sku}`}
+                to={`/product/${product.sku}`}
             >
             <button 
             className="product_button"
-            >Product Variants</button>
+            >See Variants</button>
             </Link>
+            <Link
+              className='link'
+              to={`edit-product/${product.sku}`}
+                state={product}
+              
+            >
             <button className="product_button">Edit Product</button>
+            </Link>
             <button 
             className="product_button"
             onClick={handleDeleteProduct}
