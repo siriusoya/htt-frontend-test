@@ -51,6 +51,22 @@ body {
   row-gap: 2em;
 }
 
+#product_form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+  background-color: #eacdc2;
+  width: 550px;
+  padding: 2.5em;
+  border-radius: 10px;
+}
+
+.product_label {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
 #login_title {
   position: relative;
   font-weight: bold;
@@ -70,8 +86,22 @@ body {
   font-weight: bolder;
 }
 
+#form_button {
+  background-color: #b75d69;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bolder;
+  border: 2px #1a1423 solid;
+}
+
 #login_button:hover {
   background-color: #eacdc2;
+  cursor: pointer;
+}
+
+#form_button:hover {
+  background-color: #1A1423;
+  color: #ffffff;
   cursor: pointer;
 }
 
@@ -159,9 +189,10 @@ body {
 
 .product_container {
   align-self: center;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));;
+  grid-template-columns: repeat(auto-fill, minmax(515px, 1fr));;
   justify-content: center;
-  row-gap: 3rem;
+  column-gap: 5rem;
+  row-gap: 5rem;
   padding-top: 1rem;
 }
 
@@ -180,13 +211,28 @@ body {
   flex-direction: column;
 }
 
+.product_desc_container {
+  background-color: #FFFFFF;
+  padding: 1em 1.5em;
+  border: 2px #1a1423 solid;
+  width: 420px;
+  box-sizing: border-box;
+  align-self: center;
+  margin: 1em 0;
+}
+
 .product_text {
+  text-align: center;
+  margin: 0;
+}
+
+.product_title {
   text-align: center;
 }
 
 .product_button {
   background-color: #b75d69;
-  width: 190px;
+  width: 420px;
   border: 2px #1a1423 solid;
   align-self: center;
   margin: 0.5em;
@@ -203,6 +249,16 @@ body {
   border: 2px #1a1423 solid;
   align-self: flex-end;
   margin-right: 5em;
+  margin-bottom: 2.5em;
+}
+
+.add_variant_form_button {
+  background-color: #b75d69;
+  width: 210px;
+  border: 2px #1a1423 solid;
+  align-self: flex-end;
+  margin-right: 5em;
+  margin-bottom: 0.5em;
 }
 
 .add_variant_button:hover {
@@ -210,9 +266,85 @@ body {
   color: #ffffff;
 }
 
+.add_variant_form_button:hover {
+  background-color: #372549;
+  color: #ffffff;
+}
+
 .product_button:hover {
   background-color: #372549;
   color: #ffffff;
+}
+
+.wysiwyg_button_container {
+  margin-bottom: 0.75em;
+  padding: 0;
+}
+
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  border-radius: 10px;
+  margin: auto;
+  padding: 20px;
+  width: 500px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.delete_variant {
+  color: #580000;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.delete_variant:hover,
+.delete_variant:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.variant_form_title {
+  text-align: center;
+}
+
+.variant_info {
+  display: flex;
+  justify-content: space-between;
+  background-color: #774c60;
+  color: #FFFFFF;
+  padding: 0.5px 20px;
+  border-radius: 10px;
+  align-items: center;
+  margin-bottom: 0;
+  border: 2px #1a1423 solid;
 }
 
 h1 {

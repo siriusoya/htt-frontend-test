@@ -17,14 +17,14 @@ const VariantCard = (props) => {
   return (
     <div className="product_card_container">
       <div className="product_card_content">
-        <h3 className="product_text">{variant.name}</h3>
+        <h3 className="product_title">{variant.name}</h3>
         <p className="product_text">{variant.sku}</p>
         <p className="product_text">{rupiahFormat(variant.price)}</p>
-
+        
         <button 
         className="product_button"
         onClick={handleDeleteVariant}
-        >Delete Product</button>
+        >Delete Variant</button>
       </div>
     </div>
   );

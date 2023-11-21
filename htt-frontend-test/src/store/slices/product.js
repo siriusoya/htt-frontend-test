@@ -9,7 +9,56 @@ export const productSlice = createSlice({
         sku: "SKU001",
         brand: "Brand A",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget velit et ipsum faucibus varius.",
+        {
+          blocks: [
+            {
+              key: '8i090',
+              text: 'Hello CodePulse!',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 16,
+                  style: 'BOLD',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+            {
+              key: '42ncd',
+              text: 'This text should be underlined.',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 31,
+                  style: 'UNDERLINE',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+            {
+              key: '327r6',
+              text: 'And this text should be italic.',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 31,
+                  style: 'ITALIC',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+          ],
+          entityMap: {},
+        },
         variants: [
           {
             name: "Variant A1",
@@ -28,7 +77,56 @@ export const productSlice = createSlice({
         sku: "SKU002",
         brand: "Brand B",
         description:
-          "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+        {
+          blocks: [
+            {
+              key: '8i090',
+              text: 'Hello CodePulse!',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 16,
+                  style: 'BOLD',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+            {
+              key: '42ncd',
+              text: 'This text should be underlined.',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 31,
+                  style: 'UNDERLINE',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+            {
+              key: '327r6',
+              text: 'And this text should be italic.',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 31,
+                  style: 'ITALIC',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+          ],
+          entityMap: {},
+        },
         variants: [
           {
             name: "Variant B1",
@@ -42,7 +140,56 @@ export const productSlice = createSlice({
         sku: "SKU003",
         brand: "Brand C",
         description:
-          "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas.",
+        {
+          blocks: [
+            {
+              key: '8i090',
+              text: 'Hello CodePulse!',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 16,
+                  style: 'BOLD',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+            {
+              key: '42ncd',
+              text: 'This text should be underlined.',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 31,
+                  style: 'UNDERLINE',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+            {
+              key: '327r6',
+              text: 'And this text should be italic.',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 31,
+                  style: 'ITALIC',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+          ],
+          entityMap: {},
+        },
         variants: [],
       },
       {
@@ -50,7 +197,56 @@ export const productSlice = createSlice({
         sku: "SKU004",
         brand: "Brand A",
         description:
-          "Sed nec libero sed tellus commodo condimentum. Proin vestibulum elit non urna rhoncus.",
+        {
+          blocks: [
+            {
+              key: '8i090',
+              text: 'Hello CodePulse!',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 16,
+                  style: 'BOLD',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+            {
+              key: '42ncd',
+              text: 'This text should be underlined.',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 31,
+                  style: 'UNDERLINE',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+            {
+              key: '327r6',
+              text: 'And this text should be italic.',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 31,
+                  style: 'ITALIC',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+          ],
+          entityMap: {},
+        },
         variants: [
           {
             name: "Variant A3",
@@ -69,7 +265,56 @@ export const productSlice = createSlice({
         sku: "SKU005",
         brand: "Brand D",
         description:
-          "Integer vel dapibus tortor, eu fermentum velit. In auctor nulla eget lorem lacinia, et.",
+        {
+          blocks: [
+            {
+              key: '8i090',
+              text: 'Hello CodePulse!',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 16,
+                  style: 'BOLD',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+            {
+              key: '42ncd',
+              text: 'This text should be underlined.',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 31,
+                  style: 'UNDERLINE',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+            {
+              key: '327r6',
+              text: 'And this text should be italic.',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 31,
+                  style: 'ITALIC',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+          ],
+          entityMap: {},
+        },
         variants: [
           {
             name: "Variant D1",
@@ -83,7 +328,56 @@ export const productSlice = createSlice({
         sku: "SKU006",
         brand: "Brand B",
         description:
-          "Fusce vel mauris vel neque tristique dictum. Quisque tempor semper lorem, vel tincidunt velit.",
+        {
+          blocks: [
+            {
+              key: '8i090',
+              text: 'Hello CodePulse!',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 16,
+                  style: 'BOLD',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+            {
+              key: '42ncd',
+              text: 'This text should be underlined.',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 31,
+                  style: 'UNDERLINE',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+            {
+              key: '327r6',
+              text: 'And this text should be italic.',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 31,
+                  style: 'ITALIC',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+          ],
+          entityMap: {},
+        },
         variants: [],
       },
       {
@@ -91,7 +385,56 @@ export const productSlice = createSlice({
         sku: "SKU007",
         brand: "Brand C",
         description:
-          "Donec in ullamcorper justo, in efficitur felis. Morbi ultricies ante ac ex commodo, sit.",
+        {
+          blocks: [
+            {
+              key: '8i090',
+              text: 'Hello CodePulse!',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 16,
+                  style: 'BOLD',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+            {
+              key: '42ncd',
+              text: 'This text should be underlined.',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 31,
+                  style: 'UNDERLINE',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+            {
+              key: '327r6',
+              text: 'And this text should be italic.',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 31,
+                  style: 'ITALIC',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+          ],
+          entityMap: {},
+        },
         variants: [
           {
             name: "Variant C1",
@@ -115,7 +458,56 @@ export const productSlice = createSlice({
         sku: "SKU008",
         brand: "Brand D",
         description:
-          "Etiam vitae commodo tortor, at posuere lorem. Phasellus vehicula mi nec sapien eleifend.",
+        {
+          blocks: [
+            {
+              key: '8i090',
+              text: 'Hello CodePulse!',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 16,
+                  style: 'BOLD',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+            {
+              key: '42ncd',
+              text: 'This text should be underlined.',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 31,
+                  style: 'UNDERLINE',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+            {
+              key: '327r6',
+              text: 'And this text should be italic.',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 31,
+                  style: 'ITALIC',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+          ],
+          entityMap: {},
+        },
         variants: [
           {
             name: "Variant D2",
@@ -129,7 +521,56 @@ export const productSlice = createSlice({
         sku: "SKU009",
         brand: "Brand A",
         description:
-          "Nam at bibendum dolor. Fusce in tempus quam. Vivamus vel eros ac felis commodo.",
+        {
+          blocks: [
+            {
+              key: '8i090',
+              text: 'Hello CodePulse!',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 16,
+                  style: 'BOLD',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+            {
+              key: '42ncd',
+              text: 'This text should be underlined.',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 31,
+                  style: 'UNDERLINE',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+            {
+              key: '327r6',
+              text: 'And this text should be italic.',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 31,
+                  style: 'ITALIC',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+          ],
+          entityMap: {},
+        },
         variants: [],
       },
       {
@@ -137,7 +578,56 @@ export const productSlice = createSlice({
         sku: "SKU010",
         brand: "Brand B",
         description:
-          "Curabitur tincidunt tortor vitae est dignissim, at placerat ligula congue. Nunc ullamcorper risus sed.",
+        {
+          blocks: [
+            {
+              key: '8i090',
+              text: 'Hello CodePulse!',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 16,
+                  style: 'BOLD',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+            {
+              key: '42ncd',
+              text: 'This text should be underlined.',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 31,
+                  style: 'UNDERLINE',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+            {
+              key: '327r6',
+              text: 'And this text should be italic.',
+              type: 'unstyled',
+              depth: 0,
+              inlineStyleRanges: [
+                {
+                  offset: 0,
+                  length: 31,
+                  style: 'ITALIC',
+                },
+              ],
+              entityRanges: [],
+              data: {},
+            },
+          ],
+          entityMap: {},
+        },
         variants: [
           {
             name: "Variant B2",
@@ -206,11 +696,22 @@ export const productSlice = createSlice({
 
       state.productList = productList;
     },
+    addProduct: (state, action) => {
+      let productList = state.productList;
+
+      productList.push(action.payload)
+
+      console.log(action.payload, '<<< actionpayload')
+      console.log(state.productList, '<<< asli')
+      console.log(productList, '<<< terbaru')
+
+      state.productList = productList;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { deleteProduct, fetchProductVariants, deleteProductVariant } =
+export const { deleteProduct, fetchProductVariants, deleteProductVariant, addProduct } =
   productSlice.actions;
 
 export default productSlice.reducer;

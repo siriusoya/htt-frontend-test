@@ -2,7 +2,7 @@ import { createBrowserRouter, redirect } from "react-router-dom";
 import App from "./App";
 import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
-import AddProduct from "./pages/AddProductPage";
+import ProductForm from "./pages/ProductForm";
 import ProductVariantPage from "./pages/ProductVariantPage";
 
 const router = createBrowserRouter([
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/add-product",
-        element: <AddProduct />,
+        element: <ProductForm />,
       },
       {
         path: "/product/:productSku",
