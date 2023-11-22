@@ -50,7 +50,7 @@ const ProductVariantPage = (props) => {
             />
           )}
       <h2 className="page_title">{`${state?.name} Variant List`}</h2>
-      <button onClick={handleShowModal} className='add_variant_button'>{`Add ${state?.name} Variant`}</button>
+      <button onClick={handleShowModal} className='add_variant_button'>Add Variant</button>
       <div className="product_container container grid">
         {productVariantList?.map((variant) => {
           return <VariantCard key={variant.sku} variant={variant} productSku={productSku} />
