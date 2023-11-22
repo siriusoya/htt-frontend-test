@@ -41,6 +41,7 @@ const LoginPage = () => {
 
           <div className="input_container">
             <input
+              type="password"
               className="form_input"
               placeholder="Password"
               {...register("password", { required: true })}
